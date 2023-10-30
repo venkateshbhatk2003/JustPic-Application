@@ -12,7 +12,7 @@ const TrackOrder = () => {
 
   useEffect(() => {
     dispatch(getAllOrdersOfUser(user._id));
-  }, [dispatch]);
+  }, [dispatch]); 
 
   const data = orders && orders.find((item) => item._id === id);
 

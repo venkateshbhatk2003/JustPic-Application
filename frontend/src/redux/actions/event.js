@@ -7,7 +7,7 @@ export const createevent = (data) => async (dispatch) => {
     dispatch({
       type: "eventCreateRequest",
     });
-
+ 
     const { d } = await axios.post(`${server}/event/create-event`, data);
     dispatch({
       type: "eventCreateSuccess",

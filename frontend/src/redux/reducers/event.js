@@ -3,7 +3,7 @@ import { createReducer } from "@reduxjs/toolkit";
 const initialState = {
   isLoading: true,
 };
-
+ 
 export const eventReducer = createReducer(initialState, {
   eventCreateRequest: (state) => {
     state.isLoading = true;

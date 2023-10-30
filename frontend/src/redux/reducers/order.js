@@ -3,7 +3,7 @@ import { createReducer } from "@reduxjs/toolkit";
 const initialState = {
   isLoading: true,
 };
-
+ 
 export const orderReducer = createReducer(initialState, {
   // get all orders of user
   getAllOrdersUserRequest: (state) => {

@@ -11,7 +11,7 @@ const CreateEvent = () => {
   const { success, error } = useSelector((state) => state.events);
   const navigate = useNavigate();
   const dispatch = useDispatch();
-
+ 
   const [images, setImages] = useState([]);
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");

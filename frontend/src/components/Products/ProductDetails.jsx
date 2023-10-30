@@ -12,7 +12,7 @@ import { server } from "../../server";
 import styles from "../../styles/styles";
 import {
   addToWishlist,
-  removeFromWishlist,
+  removeFromWishlist, 
 } from "../../redux/actions/wishlist";
 import { addTocart } from "../../redux/actions/cart";
 import { toast } from "react-toastify";

@@ -9,7 +9,7 @@ const Hero = () => {
       style={{
         backgroundImage:
           "url(https://themes.rslahmed.dev/rafcart/assets/images/banner-2.jpg)",
-      }}
+      }} 
     >
       <div className={`${styles.section} w-[90%] 800px:w-[60%]`}>
         <h1

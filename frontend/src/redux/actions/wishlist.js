@@ -8,7 +8,7 @@ export const addToWishlist = (data) => async (dispatch, getState) => {
     localStorage.setItem("wishlistItems", JSON.stringify(getState().wishlist.wishlist));
     return data;
   };
-  
+   
   // remove from wishlist
   export const removeFromWishlist = (data) => async (dispatch, getState) => {
     dispatch({

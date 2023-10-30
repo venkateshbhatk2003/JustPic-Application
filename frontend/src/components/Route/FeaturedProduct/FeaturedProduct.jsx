@@ -7,7 +7,7 @@ const FeaturedProduct = () => {
   const {allProducts} = useSelector((state) => state.products);
    
   return (
-    <div>
+    <div> 
       <div className={`${styles.section}`}>
         <div className={`${styles.heading}`}>
           <h1>Featured Products</h1>

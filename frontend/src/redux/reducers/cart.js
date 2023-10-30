@@ -5,7 +5,7 @@ const initialState = {
     ? JSON.parse(localStorage.getItem("cartItems"))
     : [],
 };
-
+ 
 export const cartReducer = createReducer(initialState, {
   addToCart: (state, action) => {
     const item = action.payload;

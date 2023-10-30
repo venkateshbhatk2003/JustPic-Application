@@ -12,7 +12,7 @@ const FAQPage = () => {
     </div>
   );
 };
-
+ 
 const Faq = () => {
   const [activeTab, setActiveTab] = useState(0);
 

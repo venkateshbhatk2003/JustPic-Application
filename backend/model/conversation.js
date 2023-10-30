@@ -7,7 +7,7 @@ const conversationSchema = new mongoose.Schema(
     },
     members: {
       type: Array,
-    },
+    }, 
     lastMessage: {
       type: String,
     },

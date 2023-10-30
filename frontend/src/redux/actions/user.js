@@ -13,7 +13,7 @@ export const loadUser = () => async (dispatch) => {
     dispatch({
       type: "LoadUserSuccess",
       payload: data.user,
-    });
+    }); 
   } catch (error) {
     dispatch({
       type: "LoadUserFail",

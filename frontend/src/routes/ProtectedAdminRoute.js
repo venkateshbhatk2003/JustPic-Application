@@ -10,7 +10,7 @@ const ProtectedAdminRoute = ({ children }) => {
         return <Navigate to="/" replace />;
     }
     return children;
-  }
+  } 
 };
 
 export default ProtectedAdminRoute;

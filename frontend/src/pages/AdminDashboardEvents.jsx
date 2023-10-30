@@ -15,7 +15,7 @@ const AdminDashboardEvents = () => {
         <AllEvents />
       </div>
     </div>
-  </div>
+  </div> 
   )
 }
 

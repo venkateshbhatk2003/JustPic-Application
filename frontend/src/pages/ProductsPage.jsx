@@ -6,7 +6,7 @@ import Header from "../components/Layout/Header";
 import Loader from "../components/Layout/Loader";
 import ProductCard from "../components/Route/ProductCard/ProductCard";
 import styles from "../styles/styles";
-
+ 
 const ProductsPage = () => {
   const [searchParams] = useSearchParams();
   const categoryData = searchParams.get("category");

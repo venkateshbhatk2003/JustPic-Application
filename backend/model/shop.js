@@ -7,7 +7,7 @@ const shopSchema = new mongoose.Schema({
     type: String,
     required: [true, "Please enter your shop name!"],
   },
-  email: {
+  email: { 
     type: String,
     required: [true, "Please enter your shop email address"],
   },

@@ -13,7 +13,7 @@ export const createProduct =
     stock,
     shopId,
     images
-  ) =>
+  ) => 
   async (dispatch) => {
     try {
       dispatch({

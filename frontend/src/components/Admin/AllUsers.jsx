@@ -8,8 +8,9 @@ import { Button } from "@material-ui/core";
 import styles from "../../styles/styles";
 import { RxCross1 } from "react-icons/rx";
 import axios from "axios";
-import { server } from "../../server";
 import { toast } from "react-toastify";
+import { server } from "../../server";
+
 
 const AllUsers = () => {
   const dispatch = useDispatch();

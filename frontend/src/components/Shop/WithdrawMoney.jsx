@@ -8,7 +8,7 @@ import { server } from "../../server";
 import { toast } from "react-toastify";
 import { loadSeller } from "../../redux/actions/user";
 import { AiOutlineDelete } from "react-icons/ai";
-
+ 
 const WithdrawMoney = () => {
   const [open, setOpen] = useState(false);
   const dispatch = useDispatch();

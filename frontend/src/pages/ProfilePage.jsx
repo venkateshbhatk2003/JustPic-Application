@@ -5,7 +5,7 @@ import Loader from "../components/Layout/Loader";
 import ProfileSideBar from "../components/Profile/ProfileSidebar";
 import ProfileContent from "../components/Profile/ProfileContent";
 import { useSelector } from "react-redux";
-
+ 
 const ProfilePage = () => {
   const { loading } = useSelector((state) => state.user);
   const [active, setActive] = useState(1);

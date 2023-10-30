@@ -6,7 +6,7 @@ import styles from "../../styles/styles";
 import axios from "axios";
 import { loadSeller } from "../../redux/actions/user";
 import { toast } from "react-toastify";
-
+ 
 const ShopSettings = () => {
   const { seller } = useSelector((state) => state.seller);
   const [avatar, setAvatar] = useState();

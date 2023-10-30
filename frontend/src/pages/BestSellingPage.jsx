@@ -6,7 +6,7 @@ import Loader from "../components/Layout/Loader";
 import ProductCard from "../components/Route/ProductCard/ProductCard";
 import styles from "../styles/styles";
 import Footer from "../components/Layout/Footer";
-
+ 
 const BestSellingPage = () => {
   const [data, setData] = useState([]);
   const {allProducts,isLoading} = useSelector((state) => state.products);

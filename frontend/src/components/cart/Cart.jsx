@@ -5,8 +5,9 @@ import { HiOutlineMinus, HiPlus } from "react-icons/hi";
 import styles from "../../styles/styles";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { addTocart, removeFromCart } from "../../redux/actions/cart";
 import { toast } from "react-toastify";
+import { addTocart, removeFromCart } from "../../redux/actions/cart";
+
 
 const Cart = ({ setOpenCart }) => {
   const { cart } = useSelector((state) => state.cart);

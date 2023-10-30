@@ -10,7 +10,7 @@ import {
   BestSellingPage,
   EventsPage,
   FAQPage,
-  CheckoutPage,
+  CheckoutPage, 
   PaymentPage,
   OrderSuccessPage,
   ProductDetailsPage,

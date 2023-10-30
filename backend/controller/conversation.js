@@ -4,7 +4,7 @@ const catchAsyncErrors = require("../middleware/catchAsyncErrors");
 const express = require("express");
 const { isSeller, isAuthenticated } = require("../middleware/auth");
 const router = express.Router();
-
+ 
 // create a new conversation
 router.post(
   "/create-new-conversation",

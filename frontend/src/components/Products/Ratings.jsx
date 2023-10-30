@@ -13,7 +13,7 @@ const Ratings = ({ rating }) => {
           size={20}
           color="#f6b100"
           className="mr-2 cursor-pointer"
-        />
+        /> 
       );
     } else if (i === Math.ceil(rating) && !Number.isInteger(rating)) {
       stars.push(

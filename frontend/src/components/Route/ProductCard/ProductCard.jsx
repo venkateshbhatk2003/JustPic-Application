@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 import styles from "../../../styles/styles";
 import { useDispatch, useSelector } from "react-redux";
 import ProductDetailsCard from "../ProductDetailsCard/ProductDetailsCard";
-import {
+import { 
   addToWishlist,
   removeFromWishlist,
 } from "../../../redux/actions/wishlist";

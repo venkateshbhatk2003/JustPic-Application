@@ -8,8 +8,9 @@ import { getAllProductsShop } from "../../redux/actions/product";
 import { deleteProduct } from "../../redux/actions/product";
 import Loader from "../Layout/Loader";
 import axios from "axios";
-import { server } from "../../server";
 import { useState } from "react";
+import { server } from "../../server";
+
 
 const AllProducts = () => {
   const [data, setData] = useState([]);

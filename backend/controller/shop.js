@@ -10,7 +10,6 @@ const catchAsyncErrors = require("../middleware/catchAsyncErrors");
 const ErrorHandler = require("../utils/ErrorHandler");
 const sendShopToken = require("../utils/shopToken");
 
-// create shop
 router.post("/create-shop", catchAsyncErrors(async (req, res, next) => {
   try {
     const { email } = req.body;
@@ -39,7 +38,7 @@ router.post("/create-shop", catchAsyncErrors(async (req, res, next) => {
 
     const activationToken = createActivationToken(seller);
 
-    const activationUrl = `https://eshop-tutorial-pyri.vercel.app/seller/activation/${activationToken}`;
+    const activationUrl = `http://localhost:3000/seller/activation/${activationToken}`;
 
     try {
       await sendMail({
@@ -66,7 +65,6 @@ const createActivationToken = (seller) => {
   });
 };
 
-// activate user
 router.post(
   "/activation",
   catchAsyncErrors(async (req, res, next) => {
@@ -107,7 +105,6 @@ router.post(
   })
 );
 
-// login shop
 router.post(
   "/login-shop",
   catchAsyncErrors(async (req, res, next) => {
@@ -139,7 +136,6 @@ router.post(
   })
 );
 
-// load shop
 router.get(
   "/getSeller",
   isSeller,
@@ -161,7 +157,6 @@ router.get(
   })
 );
 
-// log out from shop
 router.get(
   "/logout",
   catchAsyncErrors(async (req, res, next) => {
@@ -182,7 +177,6 @@ router.get(
   })
 );
 
-// get shop info
 router.get(
   "/get-shop-info/:id",
   catchAsyncErrors(async (req, res, next) => {
@@ -198,7 +192,6 @@ router.get(
   })
 );
 
-// update shop profile picture
 router.put(
   "/update-shop-avatar",
   isSeller,
@@ -233,7 +226,6 @@ router.put(
   })
 );
 
-// update seller info
 router.put(
   "/update-seller-info",
   isSeller,
@@ -265,7 +257,6 @@ router.put(
   })
 );
 
-// all sellers --- for admin
 router.get(
   "/admin-all-sellers",
   isAuthenticated,
@@ -285,7 +276,6 @@ router.get(
   })
 );
 
-// delete seller ---admin
 router.delete(
   "/delete-seller/:id",
   isAuthenticated,
@@ -312,7 +302,6 @@ router.delete(
   })
 );
 
-// update seller withdraw methods --- sellers
 router.put(
   "/update-payment-methods",
   isSeller,
@@ -334,7 +323,6 @@ router.put(
   })
 );
 
-// delete seller withdraw merthods --- only seller
 router.delete(
   "/delete-withdraw-method/",
   isSeller,

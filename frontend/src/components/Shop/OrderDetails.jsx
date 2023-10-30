@@ -7,7 +7,7 @@ import { getAllOrdersOfShop } from "../../redux/actions/order";
 import { server } from "../../server";
 import axios from "axios";
 import { toast } from "react-toastify";
-
+ 
 const OrderDetails = () => {
   const { orders, isLoading } = useSelector((state) => state.order);
   const { seller } = useSelector((state) => state.seller);

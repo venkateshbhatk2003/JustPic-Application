@@ -6,7 +6,7 @@ import styles from "../../styles/styles";
 import ProductCard from "../Route/ProductCard/ProductCard";
 import Ratings from "../Products/Ratings";
 import { getAllEventsShop } from "../../redux/actions/event";
-
+ 
 const ShopProfileData = ({ isOwner }) => {
   const { products } = useSelector((state) => state.products);
   const { events } = useSelector((state) => state.events);

@@ -11,7 +11,7 @@ import styles from "../../../styles/styles";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import { addTocart } from "../../../redux/actions/cart";
-import {
+import { 
   addToWishlist,
   removeFromWishlist,
 } from "../../../redux/actions/wishlist";

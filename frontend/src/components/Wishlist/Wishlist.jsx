@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { removeFromWishlist } from "../../redux/actions/wishlist";
 import { addTocart } from "../../redux/actions/cart";
 
-const Wishlist = ({ setOpenWishlist }) => {
+const Wishlist = ({ setOpenWishlist }) => { 
   const { wishlist } = useSelector((state) => state.wishlist);
   const dispatch = useDispatch();
 

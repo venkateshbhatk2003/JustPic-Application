@@ -11,7 +11,7 @@ const SuggestedProduct = ({ data }) => {
   useEffect(() => {
     const d =
     allProducts && allProducts.filter((i) => i.category === data.category);
-    setProductData(d);
+    setProductData(d); 
   }, []);
 
   return (

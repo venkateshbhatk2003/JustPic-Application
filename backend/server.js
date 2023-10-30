@@ -2,41 +2,41 @@ const app = require("./app");
 const connectDatabase = require("./db/Database");
 const cloudinary = require("cloudinary");
 
-// Handling uncaught Exception
-process.on("uncaughtException", (err) => {
-  console.log(`Error: ${err.message}`);
-  console.log(`shutting down the server for handling uncaught exception`);
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+  next();
 });
 
-// config
-if (process.env.NODE_ENV !== "PRODUCTION") {
+process.on("uncaughtException", (err) => {
+  console.error(`Uncaught Exception: ${err.message}`);
+  console.error("Shutting down the server due to uncaught exception");
+  process.exit(1);
+});
+
+if (process.env.NODE_ENV !== "production") {
   require("dotenv").config({
     path: "config/.env",
   });
 }
 
-// connect db
 connectDatabase();
 
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_NAME,
   api_key: process.env.CLOUDINARY_API_KEY,
-  api_secret: process.env.CLOUDINARY_API_SECRET
-})
-
-
-// create server
-const server = app.listen(process.env.PORT, () => {
-  console.log(
-    `Server is running on http://localhost:${process.env.PORT}`
-  );
+  api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
-// unhandled promise rejection
-process.on("unhandledRejection", (err) => {
-  console.log(`Shutting down the server for ${err.message}`);
-  console.log(`shutting down the server for unhandle promise rejection`);
+const server = app.listen(process.env.PORT, () => {
+  console.log(`Server is running on http://localhost:${process.env.PORT}`);
+});
 
+process.on("unhandledRejection", (err) => {
+  console.error(`Unhandled Promise Rejection: ${err.message}`);
+  console.error("Shutting down the server due to unhandled promise rejection");
+  
   server.close(() => {
     process.exit(1);
   });

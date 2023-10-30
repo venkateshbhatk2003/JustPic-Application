@@ -6,8 +6,7 @@ const { isSeller, isAuthenticated, isAdmin } = require("../middleware/auth");
 const Withdraw = require("../model/withdraw");
 const sendMail = require("../utils/sendMail");
 const router = express.Router();
-
-// create withdraw request --- only for seller
+ 
 router.post(
   "/create-withdraw-request",
   isSeller,
@@ -51,7 +50,6 @@ router.post(
   })
 );
 
-// get all withdraws --- admnin
 
 router.get(
   "/get-all-withdraw-request",
@@ -71,7 +69,6 @@ router.get(
   })
 );
 
-// update withdraw request ---- admin
 router.put(
   "/update-withdraw-request/:id",
   isAuthenticated,

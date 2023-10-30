@@ -8,7 +8,7 @@ const withdrawSchema = new mongoose.Schema({
   amount: {
     type: Number,
     required: true,
-  },
+  }, 
   status: {
     type: String,
     default: "Processing",

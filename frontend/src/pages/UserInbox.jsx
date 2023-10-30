@@ -11,7 +11,7 @@ import { TfiGallery } from "react-icons/tfi";
 import styles from "../styles/styles";
 const ENDPOINT = "https://socket-ecommerce-tu68.onrender.com/";
 const socketId = socketIO(ENDPOINT, { transports: ["websocket"] });
-
+ 
 const UserInbox = () => {
   const { user,loading } = useSelector((state) => state.user);
   const [conversations, setConversations] = useState([]);

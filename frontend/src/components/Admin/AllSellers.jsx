@@ -8,8 +8,9 @@ import { RxCross1 } from "react-icons/rx";
 import axios from "axios";
 import { server } from "../../server";
 import { toast } from "react-toastify";
-import { getAllSellers } from "../../redux/actions/sellers";
 import { Link } from "react-router-dom";
+import { getAllSellers } from "../../redux/actions/sellers";
+
 
 const AllSellers = () => {
   const dispatch = useDispatch();

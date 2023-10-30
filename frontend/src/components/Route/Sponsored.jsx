@@ -12,7 +12,7 @@ const Sponsored = () => {
             src="https://logos-world.net/wp-content/uploads/2020/04/Sony-Logo.png"
             alt=""
             style={{width:"150px", objectFit:"contain"}}
-          />
+          /> 
         </div>
         <div className="flex items-start">
           <img
