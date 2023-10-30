@@ -1,1 +1,1 @@
-@copyright by JustPic
+@Copyright by JustPic
