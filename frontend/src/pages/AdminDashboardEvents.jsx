@@ -13,7 +13,7 @@ const AdminDashboardEvents = () => {
           <AdminSideBar active={6} />
         </div>
         <AllEvents />
-      </div>
+      </div> 
     </div>
   </div>
   )
