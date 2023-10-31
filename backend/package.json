@@ -1,21 +1,22 @@
 {
-  "name": "e-shop-tutorial",
+  "name": "JustPic",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "engines": {
-    "node": "18.x" 
+    "node": "18.x"
   },
   "scripts": {
     "dev": "nodemon server.js",
     "start": "node server.js"
   },
-  "author": "shahriar Sajeeb",
+  "author": "Hrithik Shetty",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.0",
     "bcryptjs": "^2.4.3",
     "cloudinary": "^1.37.3",
+    "colors": "^1.4.0",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",

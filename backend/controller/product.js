@@ -8,7 +8,6 @@ const Shop = require("../model/shop");
 const cloudinary = require("cloudinary");
 const ErrorHandler = require("../utils/ErrorHandler");
  
-// create product
 router.post(
   "/create-product",
   catchAsyncErrors(async (req, res, next) => {
@@ -56,7 +55,6 @@ router.post(
   })
 );
 
-// get all products of a shop
 router.get(
   "/get-all-products-shop/:id",
   catchAsyncErrors(async (req, res, next) => {
@@ -73,7 +71,6 @@ router.get(
   })
 );
 
-// delete product of a shop
 router.delete(
   "/delete-shop-product/:id",
   isSeller,
@@ -103,7 +100,6 @@ router.delete(
   })
 );
 
-// get all products
 router.get(
   "/get-all-products",
   catchAsyncErrors(async (req, res, next) => {
@@ -120,7 +116,6 @@ router.get(
   })
 );
 
-// review for a product
 router.put(
   "/create-new-review",
   isAuthenticated,
@@ -177,7 +172,6 @@ router.put(
   })
 );
 
-// all products --- for admin
 router.get(
   "/admin-all-products",
   isAuthenticated,

@@ -53,14 +53,12 @@ router.post("/create-user", catchAsyncErrors(async (req, res, next) => {
   }
 }));
 
-// Create activation token
 const createActivationToken = (user) => {
   return jwt.sign({ id: user._id }, process.env.ACTIVATION_SECRET, {
     expiresIn: "5m",
   });
 };
 
-// Activate user
 router.post("/activation", catchAsyncErrors(async (req, res, next) => {
   const { activation_token } = req.body;
 
@@ -73,7 +71,6 @@ router.post("/activation", catchAsyncErrors(async (req, res, next) => {
       return next(new ErrorHandler("User not found", 400));
     }
 
-    // You can activate the user here
 
     sendToken(user, 201, res);
   } catch (error) {
@@ -81,7 +78,6 @@ router.post("/activation", catchAsyncErrors(async (req, res, next) => {
   }
 }));
 
-// Login user
 router.post("/login-user", catchAsyncErrors(async (req, res, next) => {
   const { email, password } = req.body;
 
@@ -100,6 +96,5 @@ router.post("/login-user", catchAsyncErrors(async (req, res, next) => {
   sendToken(user, 200, res);
 }));
 
-// ... Other routes ...
 
 module.exports = router;

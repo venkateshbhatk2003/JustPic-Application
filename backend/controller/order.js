@@ -7,14 +7,12 @@ const Order = require("../model/order");
 const Shop = require("../model/shop");
 const Product = require("../model/product");
  
-// create new order
 router.post(
   "/create-order",
   catchAsyncErrors(async (req, res, next) => {
     try {
       const { cart, shippingAddress, user, totalPrice, paymentInfo } = req.body;
 
-      //   group cart items by shopId
       const shopItemsMap = new Map();
 
       for (const item of cart) {
@@ -25,7 +23,6 @@ router.post(
         shopItemsMap.get(shopId).push(item);
       }
 
-      // create an order for each shop
       const orders = [];
 
       for (const [shopId, items] of shopItemsMap) {
@@ -49,7 +46,6 @@ router.post(
   })
 );
 
-// get all orders of user
 router.get(
   "/get-all-orders/:userId",
   catchAsyncErrors(async (req, res, next) => {
@@ -68,7 +64,6 @@ router.get(
   })
 );
 
-// get all orders of seller
 router.get(
   "/get-seller-all-orders/:shopId",
   catchAsyncErrors(async (req, res, next) => {
@@ -89,7 +84,6 @@ router.get(
   })
 );
 
-// update order status for seller
 router.put(
   "/update-order-status/:id",
   isSeller,
@@ -144,7 +138,6 @@ router.put(
   })
 );
 
-// give a refund ----- user
 router.put(
   "/order-refund/:id",
   catchAsyncErrors(async (req, res, next) => {
@@ -170,7 +163,6 @@ router.put(
   })
 );
 
-// accept the refund ---- seller
 router.put(
   "/order-refund-success/:id",
   isSeller,
@@ -211,7 +203,6 @@ router.put(
   })
 );
 
-// all orders --- for admin
 router.get(
   "/admin-all-orders",
   isAuthenticated,
