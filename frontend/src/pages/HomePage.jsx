@@ -7,7 +7,8 @@ import FeaturedProduct from "../components/Route/FeaturedProduct/FeaturedProduct
 import Events from "../components/Events/Events";
 import Sponsored from "../components/Route/Sponsored";
 import Footer from "../components/Layout/Footer";
- 
+import ChatbotOverlay from "../components/Layout/Chatbot"
+
 const HomePage = () => {
   return (
     <div>
@@ -18,6 +19,7 @@ const HomePage = () => {
         <Events />
         <FeaturedProduct />
         <Sponsored />
+        <ChatbotOverlay/>
         <Footer />
     </div>
   )
